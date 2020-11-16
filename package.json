@@ -1,0 +1,22 @@
+{
+  "name": "js-learning",
+  "version": "1.0.0",
+  "description": "repo of javascript training",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koire/js-learning.git"
+  },
+  "author": "Pike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Koire/js-learning/issues"
+  },
+  "homepage": "https://github.com/Koire/js-learning#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
