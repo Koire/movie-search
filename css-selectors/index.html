@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>CSS Selectors</title>
 </head>
 <body>
 <div>
     <h1>Rules about CSS Selectors</h1>
+    <div>
+        <h3>Calculate your Specificity!</h3>
+        <div id="currentScore">0,0,0,0,0</div>
+        <div>
+            <input type="text" id="inputBox"/>
+        </div>
+        <textarea id="styleSheetInput"></textarea>
+        <div>
+            <ul id="results"></ul>
+        </div>
+    </div>
+    <script src="selectors.js" type="module"></script>
 </div>
 </body>
 </html>
