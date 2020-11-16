@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b570e5-67fc-4740-b920-4d4109ff8e8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css-selectors/js/css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css-selectors/js/specificity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css-selectors/selectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css-selectors/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css-selectors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/css-selectors/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605487375367</updated>
-      <workItem from="1605487376483" duration="4672000" />
+      <workItem from="1605487376483" duration="5868000" />
+      <workItem from="1605510278917" duration="682000" />
     </task>
     <servers />
   </component>
