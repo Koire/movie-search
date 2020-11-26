@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b570e5-67fc-4740-b920-4d4109ff8e8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/h.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css-selectors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/css-selectors/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css-selectors/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/css-selectors/selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css-selectors/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css-selectors/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,23 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.10.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,11 +62,25 @@
       <option name="presentableId" value="Default" />
       <updated>1605487375367</updated>
       <workItem from="1605487376483" duration="5868000" />
-      <workItem from="1605510278917" duration="682000" />
+      <workItem from="1605510278917" duration="1305000" />
+      <workItem from="1605569671396" duration="599000" />
+      <workItem from="1605591914688" duration="1123000" />
+      <workItem from="1605657034373" duration="599000" />
+      <workItem from="1606351162182" duration="4588000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2338" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606351194301">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606351194301" />
+    <state x="93" y="67" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606352620281">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="93" y="67" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606352620281" />
   </component>
 </project>

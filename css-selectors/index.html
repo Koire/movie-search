@@ -6,20 +6,26 @@
     <title>CSS Selectors</title>
 </head>
 <body>
-<div>
+<main>
     <h1>Rules about CSS Selectors</h1>
+    <div class="centered">
+        <h3>現在の結果:</h3>
+        <h2 id="currentScore">0,0,0,0,0</h2>
+    </div>
     <div>
-        <h3>Calculate your Specificity!</h3>
-        <div id="currentScore">0,0,0,0,0</div>
-        <div>
+        <label>CSS Selectorを入れてください:
             <input type="text" id="inputBox"/>
-        </div>
-        <textarea id="styleSheetInput"></textarea>
-        <div>
-            <ul id="results"></ul>
+        </label>
+    </div>
+    <div class="sheetHolder">
+        <label>CSS シートもできる！
+            <textarea rows="10" id="styleSheetInput"></textarea>
+        </label>
+        <div class="resultHolder" id="results">
+
         </div>
     </div>
     <script src="selectors.js" type="module"></script>
-</div>
+</main>
 </body>
 </html>

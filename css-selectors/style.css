@@ -1,0 +1,23 @@
+main {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+input, textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+.centered {
+    display: grid;
+    place-items: center;
+}
+.sheetHolder {
+    display: grid;
+    grid-template-rows: auto 200px;
+    gap: 20px;
+}
+.resultHolder {
+    overflow-y: auto;
+
+}
