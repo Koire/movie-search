@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/rainbow.css" />
+    <title>CSS Selectors</title>
+</head>
+<body>
+    <main>
+        Specificity in CSS!
+        <article>
+            <p>
+                Demo for presentation
+            </p>
+            <div class="twoColumns">
+                <div>
+                    <ul id="magi">
+                        <li>Caspar</li>
+                        <li>Melchior</li>
+                        <li>Balthazar</li>
+                    </ul>
+                </div>
+                <pre>
+                    <code data-language="html">
+                        <ul id="magi">
+                            <li>Caspar</li>
+                            <li>Melchior</li>
+                            <li>Balthazar</li>
+                        </ul>
+                    </code>
+                </pre>
+            </div>
+            <div class="twoColumns">
+                <div>
+                    <ul id="magi">
+                        <li class="favorite">Caspar</li>
+                        <li>Melchior</li>
+                        <li>Balthazar</li>
+                    </ul>
+                </div>
+                <pre>
+                    <code data-language="html">
+                        <!--css: .favorite{ color: red;}-->
+                        <ul id="magi">
+                            <li class="favorite">Caspar</li>
+                            <li>Melchior</li>
+                            <li>Balthazar</li>
+                        </ul>
+                    </code>
+                </pre>
+            </div>
+            <div class="twoColumns">
+                <div>
+                    <ul id="magi">
+                        <li class="favorite1">Caspar</li>
+                        <li>Melchior</li>
+                        <li>Balthazar</li>
+                    </ul>
+                </div>
+                <pre>
+                    <code data-language="html">
+                        <!--css: ul#magi li.favorite{color: red; font-weight: bold}-->
+                        <ul id="magi">
+                            <li class="favorite">Caspar</li>
+                            <li>Melchior</li>
+                            <li>Balthazar</li>
+                        </ul>
+                    </code>
+                </pre>
+            </div>
+        </article>
+    </main>
+    <script src="js/rainbow.js"></script>
+</body>
+</html>

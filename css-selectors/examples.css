@@ -1,0 +1,20 @@
+.twoColumns {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+ul#magi li {
+    font-weight: normal;
+    font-size: 20px;
+    color: black;
+    list-style: none;
+}
+
+.favorite {
+    color: red !important;
+}
+
+ul#magi li.favorite1{
+    color: red;
+    font-weight: bold;
+}
