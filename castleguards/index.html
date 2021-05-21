@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="module">
+            import {h, text, app} from "https://unpkg.com/hyperapp"
+            app({
+                init: { entries: []},
+                view: () => h("main", {}, text("Hello")),
+                node: document.getElementById("app")
+            })
+        </script>
+    </head>
+    <body>
+        <main id="app"></main>
+    </body>
+</html>
