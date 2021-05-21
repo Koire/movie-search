@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
         <script type="module">
             import {h, text, app} from "https://unpkg.com/hyperapp"
             import {timezones} from "./js/timezones.js"
+            import {div, label, option, h1} from "./js/htmlTags.js"
+            import {chooseTZ, preventPropagation, logInput, toggleCreator, addSwap, addCG} from "./js/actions.js"
+            import {swapModal} from "./js/swapModal.js"
+
+
             app({
-                init: { entries: timezones},
-                view: () => h("main", {}, timezones.map((element) => text(element))),
+                init: { timezones, entries:[], chosenTZ: [], guardSwaps:[], isCreating: false, currentCG: ""},
+                view: ({timezones, entries, chosenTZ, guardSwaps, isCreating, currentCG}) => h("main", {}, [
+                    h1(text("Welcome to the GuardSwap creator")),
+                    div([
+                        isCreating && swapModal(currentCG),
+                        div([
+                            h("button", {onclick: toggleCreator}, text("+")),
+                            h("select", {onchange: chooseTZ}, timezones.map((element) => option(text(element)))) 
+                        ]),
+                        h("div", {}, chosenTZ.map((el) => text(el))),
+                        h("div", {}, guardSwaps.map((element) => text(element)))
+
+                    ])
+                ]),
                 node: document.getElementById("app")
             })
         </script>
