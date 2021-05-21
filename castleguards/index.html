@@ -5,26 +5,26 @@
         <script type="module">
             import {h, text, app} from "https://unpkg.com/hyperapp"
             import {timezones} from "./js/timezones.js"
-            import {div, label, option, h1} from "./js/htmlTags.js"
+            import {div, label, option, h1, button, select, main} from "./js/htmlTags.js"
             import {chooseTZ, preventPropagation, logInput, toggleCreator, addSwap, addCG} from "./js/actions.js"
             import {swapModal} from "./js/swapModal.js"
+            import {DisplayTable} from "./js/displayTable.js"
 
 
             app({
                 init: { timezones, entries:[], chosenTZ: [], guardSwaps:[], isCreating: false, currentCG: ""},
-                view: ({timezones, entries, chosenTZ, guardSwaps, isCreating, currentCG}) => h("main", {}, [
-                    h1(text("Welcome to the GuardSwap creator")),
-                    div([
-                        isCreating && swapModal(currentCG),
+                view: ({timezones, entries, chosenTZ, guardSwaps, isCreating, currentCG}) => main(
+                    [
+                        h1(text("Welcome to the GuardSwap creator")),
                         div([
-                            h("button", {onclick: toggleCreator}, text("+")),
-                            h("select", {onchange: chooseTZ}, timezones.map((element) => option(text(element)))) 
-                        ]),
-                        h("div", {}, chosenTZ.map((el) => text(el))),
-                        h("div", {}, guardSwaps.map((element) => text(element)))
-
-                    ])
-                ]),
+                            isCreating && swapModal(currentCG),
+                            div([
+                                button({onclick: toggleCreator}, text("+")),
+                                select({onchange: chooseTZ}, timezones.map((element) => option(text(element)))) 
+                            ]),
+                            DisplayTable(chosenTZ, guardSwaps)
+                        ])
+                    ]),
                 node: document.getElementById("app")
             })
         </script>

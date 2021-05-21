@@ -15,5 +15,7 @@ export const addSwap = (state) => ({...state, guardSwaps: [...state.guardSwaps, 
 export const addCG = (state) => ({
     ...state,
     isCreating: !state.isCreating,
-    guardSwaps: [...state.guardSwaps, state.currentCG]
+    guardSwaps: [...state.guardSwaps,
+         ...state.currentCG && [new Date(state.currentCG)]
+    ]
 })
