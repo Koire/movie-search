@@ -21,12 +21,16 @@ main {
     justify-items: center;
 }
 .pickerholder {
-    background-color: white;
     padding: 20px;
-
+    display: grid;
+    gap: 10px;
+    background-color: indigo;
+    border-radius: 8px;
 }
 .formholder {
     display: grid;
     justify-content: space-between;
     grid-template-columns: 1fr auto;
+    column-gap: 10px;
+    align-items: center;
 }

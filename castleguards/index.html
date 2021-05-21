@@ -10,19 +10,28 @@
             import {swapModal} from "./js/swapModal.js"
             import {DisplayTable} from "./js/displayTable.js"
 
+            const initialState = { 
+                timezones,
+                chosenTZ: [],
+                guardSwaps:[],
+                isCreating: false,
+                currentCG: "",
+                currentAmount: 0,
+                currentLevel: 1,
+            }
 
             app({
-                init: { timezones, entries:[], chosenTZ: [], guardSwaps:[], isCreating: false, currentCG: ""},
-                view: ({timezones, entries, chosenTZ, guardSwaps, isCreating, currentCG}) => main(
+                init: initialState,
+                view: (state) => main(
                     [
                         h1(text("Welcome to the GuardSwap creator")),
                         div([
-                            isCreating && swapModal(currentCG),
+                            state.isCreating && swapModal(state),
                             div([
-                                button({onclick: toggleCreator}, text("+")),
+                                button({onclick: toggleCreator}, text("add swap")),
                                 select({onchange: chooseTZ}, timezones.map((element) => option(text(element)))) 
                             ]),
-                            DisplayTable(chosenTZ, guardSwaps)
+                            state.guardSwaps.length > 0 && DisplayTable(state)
                         ])
                     ]),
                 node: document.getElementById("app")

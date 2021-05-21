@@ -1,11 +1,11 @@
 
 import {h, text} from "https://unpkg.com/hyperapp"
 import {label, input, select, option} from "./htmlTags.js"
-import {toggleCreator, preventPropagation, addCG, logInput} from "./actions.js"
+import {toggleCreator, preventPropagation, addCG, logInput, updateAmount, updateLevel} from "./actions.js"
 
 const FlexDiv = (children) => h("div", {class: "formholder"}, children)
 
-export const swapModal = (currentCG) => h("div", {class: "overlay", onclick: toggleCreator},
+export const swapModal = ({currentCG, currentAmount, currentLevel}) => h("div", {class: "overlay", onclick: toggleCreator},
     h("div",
     {onclick: preventPropagation(a=>a), class: "pickerholder"}, [
     FlexDiv([
@@ -18,22 +18,27 @@ export const swapModal = (currentCG) => h("div", {class: "overlay", onclick: tog
                 id: "cg-datetime",
             oninput: logInput, value: currentCG })
     ]),
-    // FlexDiv([
-    //     label([
-    //         text("Amount (Millions)")
-    //     ]),
-    //     input({
-    //         type: "number",
-    //         min: "1",
-    //         max: "10"
-    //     })
-    // ]),
-    // FlexDiv([
-    //     label([
-    //         text("CastleLevel")
-    //     ]),
-    //     select({}, ["t1","t2","t3","t4"].map((element) => option(text(element))))
-    // ]),
+    FlexDiv([
+        label([
+            text("Amount (Millions)")
+        ]),
+        input({
+            type: "number",
+            min: "1",
+            max: "10",
+            value: currentAmount,
+            oninput: updateAmount
+        })
+    ]),
+    FlexDiv([
+        label([
+            text("Castle Level")
+        ]),
+        select({
+            value: currentLevel,
+            oninput: updateLevel
+        }, ["t1","t2","t3","t4"].map((element) => option(text(element))))
+    ]),
     h("button", {onclick: addCG}, text("confirm"))
     ]),
 )
