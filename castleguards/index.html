@@ -3,7 +3,7 @@
     <head>
         <script type="module">
             import {h, text, app} from "https://unpkg.com/hyperapp"
-            import * as timezones from "./js/timezones.json"
+            import {timezones} from "./js/timezones.js"
             app({
                 init: { entries: timezones},
                 view: () => h("main", {}, timezones.map((element) => text(element))),

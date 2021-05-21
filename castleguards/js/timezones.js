@@ -1,4 +1,4 @@
-[
+export const timezones = [
   "Africa/Abidjan",
   "Africa/Accra",
   "Africa/Addis_Ababa",
