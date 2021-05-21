@@ -15,6 +15,11 @@ export const addSwap = (state) => ({...state, guardSwaps: [...state.guardSwaps, 
 export const updateAmount = (state, {target: {value}}) => ({...state, currentAmount: value})
 export const updateLevel = (state, {target: {value}}) => ({...state, currentLevel: value})
 
+export const removeCG = (idx) => (state) => ({...state, 
+    guardSwaps: state.guardSwaps.length == 1 ? [] : [...state.guardSwaps.splice(idx, 1)]})
+export const removeTZ = (idx) => (state) => ({...state, 
+    chosenTZ: state.chosenTZ.length == 1 ? [] : [...state.chosenTZ.splice(idx, 1)]})
+
 export const addCG = (state) => ({
     ...state,
     isCreating: !state.isCreating,
