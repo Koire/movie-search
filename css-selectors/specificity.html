@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>CSS Selectors</title>
-</head>
-<body>
-<main>
-    <h1>Rules about CSS Selectors</h1>
-    <div class="centered">
-        <h3>現在の結果:</h3>
-        <h2 id="currentScore">0,0,0,0,0</h2>
-    </div>
-    <div>
-        <label>CSS Selectorを入れてください:
-            <input type="text" id="inputBox"/>
-        </label>
-    </div>
-    <div class="sheetHolder">
-        <label>CSS シートもできる！
-            <textarea rows="10" id="styleSheetInput"></textarea>
-        </label>
-        <div class="resultHolder" id="results">
-
-        </div>
-    </div>
-    <div id="testElements" />
-    <div class="twoColumns">
-        <div class="twoRows">
-            <h2>Test CSS</h2>
-            <label>ルールを追加する
-                <textarea type="text" rows="10" id="ruleAddition"></textarea>
-            </label>
-            <button>追加</button>
-        </div>
-        <div class="addElement">
-            <h2>Test Elements</h2>
-            <div class="threeColumns">
-                <label>Elementを追加する
-                    <input type="text" id="elementAddition" />
-                </label>
-                <label>Attributes ({attribute: value})
-                    <input type=text" id="elementAttributes" />
-                </label>
-                <button id="addElement">+</button>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>CSS Selectors</title>
+    </head>
+    <body>
+        <main>
+            <h1>Rules about CSS Selectors</h1>
+            <div class="centered">
+                <h3>現在の結果:</h3>
+                <h2 id="currentScore">0,0,0,0,0</h2>
             </div>
-        </div>
-    </div>
-    <script src="selectors.js" type="module"></script>
-</main>
-</body>
+            <div>
+                <label
+                    >CSS Selectorを入れてください:
+                    <input type="text" id="inputBox" />
+                </label>
+            </div>
+            <div class="sheetHolder">
+                <label
+                    >CSS シートもできる！
+                    <textarea rows="10" id="styleSheetInput"></textarea>
+                </label>
+                <div class="resultHolder" id="results"></div>
+            </div>
+            <div id="testElements"></div>
+            <div class="twoColumns">
+                <div class="twoRows">
+                    <h2>Test CSS</h2>
+                    <label
+                        >ルールを追加する
+                        <textarea
+                            type="text"
+                            rows="10"
+                            id="ruleAddition"
+                        ></textarea>
+                    </label>
+                    <button>追加</button>
+                </div>
+                <div class="addElement">
+                    <h2>Test Elements</h2>
+                    <div class="threeColumns">
+                        <form id="addElement">
+                            <label
+                                >Elementを追加する
+                                <input type="text" name="type" required="true" />
+                            </label>
+                            <label>Attributes
+                               <input type="text" name="class" placeholder="class" />
+                               <input type="text" name="style" placeholder="style" />
+                               <input type="text" name="id" placeholder="id" />
+                            </label>
+                            
+                            <input type="submit" value="+" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script src="selectors.js" type="module"></script>
+        </main>
+        <template id="attribute">
+            <select>
+                <option value="class">class</option>
+                <option value="style">style</option>
+                <option value="id">id</option>
+            </select>
+        </template>
+    </body>
 </html>

@@ -5,8 +5,27 @@ const cssInput = document.getElementById("inputBox")
 const currentScore = document.getElementById("currentScore")
 const styleSheetInput = document.getElementById("styleSheetInput")
 const styleResults = document.getElementById("results")
-const addElement = document.getElementById("addElement")
-const testElements = document.getElementById("testElements")
+const testElementsDiv = document.getElementById("testElements")
+const addForm = document.getElementById("addElement")
+addForm.addEventListener("submit", e => {
+    e.preventDefault()
+    const newElement = Array.from(e.target.elements)
+        .filter(ele => ele.type != "submit")
+        .reduce((prev, curr, idx) => {
+            if(curr.name == "type") prev.name=curr.value.toLowerCase()
+            else {
+                prev.attributes[curr.name] = curr.value
+            }
+            return prev
+        }, {name: "", attributes: {}})
+    console.log(newElement)
+    testElementsDiv.appendChild(h(
+        newElement.name,
+        newElement.attributes,
+        JSON.stringify(newElement.attributes)
+    ))
+    return false
+})
 
 const getSpecificityScore = text => calculate(text)[0].specificity
 
