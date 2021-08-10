@@ -1,36 +1,36 @@
 @import "https://unpkg.com/water.css@2/out/water.min.css";
 body {
-    max-width: 100%;
+  max-width: 100%;
 }
 main {
-    display: grid;
-    place-items: center;
-    gap: 10px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
 }
 .overlay {
-    position: absolute;
-    z-index: 10;
-    display: grid;
-    background-color: black;
-    opacity: .5;
-    top:0;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    align-items: center;
-    justify-items: center;
+  position: absolute;
+  z-index: 10;
+  display: grid;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-items: center;
 }
 .pickerholder {
-    padding: 20px;
-    display: grid;
-    gap: 10px;
-    background-color: indigo;
-    border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  background-color: indigo;
+  border-radius: 8px;
 }
 .formholder {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: 1fr auto;
-    column-gap: 10px;
-    align-items: center;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  align-items: center;
 }

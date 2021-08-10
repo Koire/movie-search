@@ -3,7 +3,8 @@ main {
     place-items: center;
     gap: 10px;
 }
-input, textarea {
+input,
+textarea {
     display: block;
     width: 100%;
     margin-top: 5px;
@@ -19,5 +20,20 @@ input, textarea {
 }
 .resultHolder {
     overflow-y: auto;
-
+}
+.twoColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.threeColumns {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-gap: 15px;
+    align-items: end;
+}
+#addElement {
+    height: 20px;
+    background-color: lightblue;
+    align-self: end;
 }

@@ -5,6 +5,8 @@ const cssInput = document.getElementById("inputBox")
 const currentScore = document.getElementById("currentScore")
 const styleSheetInput = document.getElementById("styleSheetInput")
 const styleResults = document.getElementById("results")
+const addElement = document.getElementById("addElement")
+const testElements = document.getElementById("testElements")
 
 const getSpecificityScore = text => calculate(text)[0].specificity
 
