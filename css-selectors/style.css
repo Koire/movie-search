@@ -32,7 +32,7 @@ textarea {
     grid-gap: 15px;
     align-items: end;
 }
-#addElement {
+#submitElement {
     height: 20px;
     background-color: lightblue;
     align-self: end;

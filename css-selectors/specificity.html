@@ -22,50 +22,37 @@
                 <label
                     >CSS シートもできる！
                     <textarea rows="10" id="styleSheetInput"></textarea>
+                    <button id="addRules">確認する</button>
                 </label>
                 <div class="resultHolder" id="results"></div>
             </div>
             <div id="testElements"></div>
-            <div class="twoColumns">
-                <div class="twoRows">
-                    <h2>Test CSS</h2>
-                    <label
-                        >ルールを追加する
-                        <textarea
-                            type="text"
-                            rows="10"
-                            id="ruleAddition"
-                        ></textarea>
-                    </label>
-                    <button>追加</button>
-                </div>
-                <div class="addElement">
-                    <h2>Test Elements</h2>
-                    <div class="threeColumns">
-                        <form id="addElement">
-                            <label
-                                >Elementを追加する
-                                <input type="text" name="type" required="true" />
-                            </label>
-                            <label>Attributes
-                               <input type="text" name="class" placeholder="class" />
-                               <input type="text" name="style" placeholder="style" />
-                               <input type="text" name="id" placeholder="id" />
-                            </label>
-                            
-                            <input type="submit" value="+" />
-                        </form>
-                    </div>
-                </div>
+            <div class="centered">
+                <h2>Test Elements</h2>
+                    <form id="addElement">
+                        <label
+                            >Elementを追加する
+                            <input type="text" name="type" required="true" />
+                        </label>
+                        <label
+                            >Attributes
+                            <input
+                                type="text"
+                                name="class"
+                                placeholder="class"
+                            />
+                            <input
+                                type="text"
+                                name="style"
+                                placeholder="style"
+                            />
+                            <input type="text" name="id" placeholder="id" />
+                        </label>
+                        <input type="submit" value="+" id="submitElement" />
+                    </form>
+                
             </div>
             <script src="selectors.js" type="module"></script>
         </main>
-        <template id="attribute">
-            <select>
-                <option value="class">class</option>
-                <option value="style">style</option>
-                <option value="id">id</option>
-            </select>
-        </template>
     </body>
 </html>
