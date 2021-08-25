@@ -2,12 +2,14 @@
 
 import * as Hyperapp from "hyperapp";
 
-function add(oldState) {
-  var newObj = Object.assign(oldState, {
-        firstNumber: oldState.firstNumber + 1 | 0
-      });
-  console.log(newObj);
-  return newObj;
+function updateState(oldState, newState) {
+  return Object.assign({}, Object.assign(oldState, newState));
+}
+
+function add(s, param) {
+  return updateState(s, {
+              firstNumber: s.firstNumber + 1 | 0
+            });
 }
 
 Hyperapp.app({
@@ -16,7 +18,6 @@ Hyperapp.app({
         firstNumber: 1
       },
       view: (function (state) {
-          console.log(state);
           return Hyperapp.h("div", {
                       onclick: add
                     }, Hyperapp.text("hello world! " + state.firstNumber));
@@ -24,6 +25,7 @@ Hyperapp.app({
     });
 
 export {
+  updateState ,
   add ,
   
 }
