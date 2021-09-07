@@ -2,30 +2,28 @@
 
 import * as Hyperapp from "hyperapp";
 
-function updateState(oldState, newState) {
-  return Object.assign({}, Object.assign(oldState, newState));
-}
-
-function add(s, param) {
-  return updateState(s, {
-              firstNumber: s.firstNumber + 1 | 0
-            });
+function add(s) {
+  return {
+          firstNumber: s.firstNumber + 1 | 0,
+          secondNumber: s.secondNumber
+        };
 }
 
 Hyperapp.app({
       node: document.getElementById("app"),
       init: {
-        firstNumber: 1
+        firstNumber: 1,
+        secondNumber: 0
       },
       view: (function (state) {
+          var string = String(state.firstNumber);
           return Hyperapp.h("div", {
                       onclick: add
-                    }, Hyperapp.text("hello world! " + state.firstNumber));
+                    }, Hyperapp.text("hello world! " + string));
         })
     });
 
 export {
-  updateState ,
   add ,
   
 }
