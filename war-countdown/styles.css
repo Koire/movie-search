@@ -1,0 +1,17 @@
+.clock {
+    font-size:36px;
+    font-weight: bold;
+}
+
+.holder {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: orange;
+    height: 100vh;
+    width: 100vw;
+    line-height: 1em;
+    font-size: 24px;
+  }

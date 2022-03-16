@@ -1,0 +1,15 @@
+{
+  "name": "hyperappdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html --port 8889"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hyperapp": "^2.0.19",
+    "parcel": "^2.0.0-rc.0"
+  }
+}
