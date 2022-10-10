@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Movie Search</title>
+        <script type="module" src="./src/index.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        <link rel="stylesheet" href="./src/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </head>
+    <body>
+        <div class="main-content">
+            <h1 class="header ">Movie Search!</h1>
+            <div id="content-holder">
+                <div class="tabs">
+                    <div class="tab active" data-tab="1" id="tab1">Search</div>
+                    <div class="tab" data-tab="2" id="tab2">Favorites</div>
+                </div>
+                <div class="tabContent show" id="tab-content-1">
+                    <div class="search-holder">
+                        <input type="text" placeholder="search for a movie" id="movie-search" />
+                        <i class="fa fa-2x fa-search search-icon" id="fa-search-icon"></i>
+                    </div>
+                    <div class="results">
+                        <div id="resultsList" class="resultsList"></div>
+                    </div>
+                </div>
+                <div class="tabContent hide" id="tab-content-2">
+                    <h2>Favorites</h2>
+                    <div class="results">
+                        <div id="favoritesList" class="resultsList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="hide" id="blur-cover">
+        <div class="animate__animated animate__fadeInDown" id="movieDetails">
+            <h3 id="movie-title"></h3>
+            <img id="movie-image"></img>
+            <div class="rating-row"><h4 class="rating-row">Rating: </h4><h4 id="movie-rating"></h4></div>
+            <div id="movie-overview"></div>
+            <i class="fa fa-window-close close-details fa-3x" id="close-details"></i> 
+        </div>
+    </div>
+    <template id="resultTemplate">
+        <div class="movie-entry animate__animated animate__backInRight">
+            <i class="fa fa-star fa-thin fa-2x favorite-icon"></i>
+            <img class="movie-poster"></img>
+            <span class="movie-title"></span>
+        </div>  
+    </template>
+    </body>
+</html>

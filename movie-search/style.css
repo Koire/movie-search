@@ -1,0 +1,164 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: visible
+}
+
+#movie-search:focus {
+    outline: none;
+    border: 0px solid transparent;
+    box-shadow: 0 0 0 2px transparent;
+    box-sizing: content-box;
+}
+
+.resultsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 175px);
+    gap: 20px;
+    overflow-y: scroll;
+
+}
+.search-holder {
+    display: grid;
+    align-content: center;
+    gap: 0px;
+    grid-template-columns: auto 40px;
+    background-color: var(--background);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px transparent;
+    
+}
+
+.search-holder:focus-within {
+    border: thin solid var(--focus);
+    
+}
+
+.search-icon {
+    padding-top: 5px;
+}
+.movie-poster {
+    min-width: 150px;
+    min-height: 150px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.movie-title {
+    display: block;
+}
+
+#content-holder {
+    display: grid;
+    grid-template-rows: 40px auto;
+    gap: 20px;
+}
+.movie-entry {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    max-width: 150px;
+    cursor: pointer;
+}
+.favorite-icon {
+    position: absolute;
+    top: 2x;
+    right: 2px;
+    cursor: pointer;
+}
+
+.favorite-icon:hover {
+    transform: scale(1.1);
+}
+
+.favorite {
+    color: yellow;
+    transition: all .2s ease-in-out;
+}
+.tabs {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.results {
+    overflow: auto;
+    max-height: calc(100vh - 220px);
+}
+.tab {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    
+}
+
+.active {
+    border-bottom: 1px solid transparent;
+    border: 1px solid var(--focus);
+    background-color: var(--focus);
+}
+
+#blur-cover {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    
+}
+
+#movieDetails {
+    background-color: white;
+    position: relative;
+    top: 30%;
+    left: 30%;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    background-color: var(--background);
+    padding: 20px;
+}
+
+.close-details {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    cursor: pointer;
+    background-color: var(--background)
+}
+
+.rating-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#movie-overview {
+    overflow-y: scroll;
+    max-height: 100px;
+}

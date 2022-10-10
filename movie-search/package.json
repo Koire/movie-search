@@ -1,0 +1,31 @@
+{
+  "name": "ml-frontend-test-koire",
+  "version": "1.0.0",
+  "description": "simple search for TMDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "uvu tests",
+    "develop": "live-server --open='src/index.html'",
+    "watch": "watchlist src tests -- npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monstar-lab-technical-challenge/ml-frontend-test-Koire.git"
+  },
+  "author": "Pike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monstar-lab-technical-challenge/ml-frontend-test-Koire/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/monstar-lab-technical-challenge/ml-frontend-test-Koire#readme",
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "live-server": "^1.2.2",
+    "msw": "^0.47.4",
+    "node-fetch": "^3.2.10",
+    "puppeteer": "^18.2.1",
+    "uvu": "^0.5.6",
+    "watchlist": "^0.3.1"
+  }
+}
